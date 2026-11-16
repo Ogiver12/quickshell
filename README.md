@@ -1,5 +1,5 @@
 # My Dotfiles
-placeholder for preview video or image or something
+https://youtu.be/8rHAsG2DZ0Q?is=u5qY34IG92AoAxzF
 
 ## Screenshots
 some screenshots (also a place holder)
