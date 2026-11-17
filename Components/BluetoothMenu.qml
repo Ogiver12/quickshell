@@ -3,10 +3,14 @@ import Quickshell.Bluetooth
 import QtQuick
 import QtQuick.Layouts
 
-Scope {
-  id: bluetoothMenu
+import "../Services"
+import "../config.js" as Config
+
+Item {
+  id: bt
 
   Text {
-    text: Bluetooth.defaultAdapter?.discovering ?? false
+    text: BluetoothService.bluetoothEnabled
+    color: Config.col.fg
   }
 }

@@ -3,7 +3,7 @@ import QtQuick
 import QtQuick.Layouts
 
 import "../config.js" as Config
-import "."
+import "../Services/"
 
 /*
 Text {

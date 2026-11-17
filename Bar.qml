@@ -94,6 +94,9 @@ Scope {
       SystemStatsWidget {
 	currentView: root.currentView
       }
+      BluetoothMenu {
+	visible: root.currentView === 2
+      }
       MediaWidget {
 	visible: root.currentView === 3
       }
