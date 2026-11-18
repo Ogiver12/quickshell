@@ -13,6 +13,7 @@ Scope {
   // 1 = system stats
   // 2 = bluetooth menu
   // 3 = media menu
+  // 99 = vol popup
   property int currentView: 0
 
   IpcHandler {
@@ -24,8 +25,9 @@ Scope {
     switch (currentView) {
       case 0: return 100
       case 1: return 400
-      case 2: return 340
+      case 2: return 400
       case 3: return 600
+      case 99: return 240
       default: return 100
     }
   }
@@ -36,6 +38,7 @@ Scope {
       case 1: return 320
       case 2: return 400
       case 3: return 180
+      case 99: return 34
       default: return 34
     }
   }
@@ -99,6 +102,16 @@ Scope {
       }
       MediaWidget {
 	visible: root.currentView === 3
+      }
+      Audio {
+	id: audioPopup
+
+	onOpenChanged: {
+	  if (open)
+	    root.currentView = 99
+	  else if (root.currentView === 99)
+	    root.currentView = 0
+	}
       }
     }
   }
