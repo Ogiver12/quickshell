@@ -17,7 +17,7 @@ Item {
     objects: [root.sink]
   }
 
-  visible: open ? true : false
+  visible: open
 
   onVolumeLevelChanged: {
     timeOutTimer.restart()
@@ -26,7 +26,7 @@ Item {
 
   Timer {
     id: timeOutTimer
-    interval: 3000
+    interval: 1200
     repeat: false
 
     onTriggered: {
